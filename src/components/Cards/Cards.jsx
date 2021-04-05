@@ -22,7 +22,7 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                         </Typography>
 
                         <Typography color='textSecondary'>
-                            {lastUpdate}
+                            { new Date(lastUpdate).toDateString() }
                         </Typography>
 
                         <Typography variant='body2'>
@@ -37,11 +37,11 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                         </Typography>
 
                         <Typography variant='h5'>
-                            REAL DATA
+                            <CountUp start={0} end={recovered.value} duration={2.5} separator=","/>
                         </Typography>
 
                         <Typography color='textSecondary'>
-                            REAL Date
+                            { new Date(lastUpdate).toDateString() }
                         </Typography>
 
                         <Typography variant='body2'>
@@ -56,12 +56,12 @@ const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
                         </Typography>
 
                         <Typography variant='h5'>
-                            REAL DATA
+                            <CountUp start={0} end={deaths.value} duration={2.5} separator=","/>
                         </Typography>
 
                         <Typography color='textSecondary'>
-                            REAL Date
-                        </Typography>
+                            { new Date(lastUpdate).toDateString() }
+                        </Typography> 
 
                         <Typography variant='body2'>
                             Number of Deaths
