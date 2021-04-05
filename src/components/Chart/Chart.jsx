@@ -59,7 +59,7 @@ const Chart = () => {
 
     return (
         <div className={styles.container}>
-            {lineChart}
+        {country ? barChart : lineChart}
         </div>
     );
 }
